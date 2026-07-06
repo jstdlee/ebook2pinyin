@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package unique-identifier="uid">
+<metadata>
+<dc-metadata xmlns:dc="http://purl.org/metadata/dublin_core" xmlns:oebpackage="http://openebook.org/namespaces/oeb-package/1.0/">
+<dc:Title>跟随周恩来过草地</dc:Title>
+<dc:Language>en</dc:Language>
+<dc:Identifier id="uid">0</dc:Identifier>
+<dc:Creator>张文宝</dc:Creator>
+<dc:Publisher>江苏凤凰文艺出版社</dc:Publisher>
+<dc:Description></dc:Description>
+<dc:Date>2019-06-02</dc:Date>
+</dc-metadata>
+<x-metadata>
+<output encoding="utf-8" />
+</x-metadata>
+<!-- The following meta tags are just for information and will be ignored by mobigen/kindlegen. -->
+<meta name="16777220 (hex)" content="687474703a2f2f7777772e657075626f722e636f6d" />
+<meta name="16777219 (hex)" content="457075626f72" />
+<meta name="Updated Title" content="跟随周恩来过草地" />
+<meta name="121 (hex)" content="00000046" />
+<meta name="16777217 (hex)" content="65436f72652076302e392e31322e373531205b20687474703a2f2f7777772e657075626f722e636f6d2f65636f72652e68746d6c205d" />
+<meta name="131 (hex)" content="00000001" />
+<meta name="125 (hex)" content="00000001" />
+<meta name="524 (hex)" content="7a682d434e" />
+<meta name="16777218 (hex)" content="556c74696d617465" />
+<meta name="CDE Type" content="EBOK" />
+</metadata>
+<manifest>
+<item id="item1" media-type="text/x-oeb1-document" href="gszelgcd.html" />
+<item id="ncx" media-type="application/x-dtbncx+xml" href="gszelgcd.ncx"></item>
+</manifest>
+<spine toc="ncx">
+<itemref idref="item1"/>
+</spine>
+<tours>
+</tours>
+<guide>
+
+</guide>
+</package>

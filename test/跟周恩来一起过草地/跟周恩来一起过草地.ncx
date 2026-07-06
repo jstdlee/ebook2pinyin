@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+  <head>
+    <meta content="0" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="mobiunpack.py" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>跟随周恩来过草地</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="np_1" playOrder="1">
+      <navLabel>
+        <text>封面</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos40"/>
+    </navPoint>
+    <navPoint id="np_2" playOrder="2">
+      <navLabel>
+        <text>版权信息</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos108"/>
+    </navPoint>
+    <navPoint id="np_3" playOrder="3">
+      <navLabel>
+        <text>一座不朽的丰碑</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos328"/>
+    </navPoint>
+    <navPoint id="np_4" playOrder="4">
+      <navLabel>
+        <text>一　十三岁的小红军</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos3736"/>
+    </navPoint>
+    <navPoint id="np_5" playOrder="5">
+      <navLabel>
+        <text>二　滕玉叶招“兵”</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos15763"/>
+    </navPoint>
+    <navPoint id="np_6" playOrder="6">
+      <navLabel>
+        <text>三　倔犟的“假小子”</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos27926"/>
+    </navPoint>
+    <navPoint id="np_7" playOrder="7">
+      <navLabel>
+        <text>四　学校开课了</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos43697"/>
+    </navPoint>
+    <navPoint id="np_8" playOrder="8">
+      <navLabel>
+        <text>五　偷看喇嘛寺</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos57394"/>
+    </navPoint>
+    <navPoint id="np_9" playOrder="9">
+      <navLabel>
+        <text>六　走下去，并要活着</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos78949"/>
+    </navPoint>
+    <navPoint id="np_10" playOrder="10">
+      <navLabel>
+        <text>七　“小红军”的心事</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos98331"/>
+    </navPoint>
+    <navPoint id="np_11" playOrder="11">
+      <navLabel>
+        <text>八　女孩的心是一朵洁白的云</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos119031"/>
+    </navPoint>
+    <navPoint id="np_12" playOrder="12">
+      <navLabel>
+        <text>九　“绿色”的舌头</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos130872"/>
+    </navPoint>
+    <navPoint id="np_13" playOrder="13">
+      <navLabel>
+        <text>十　老王班长掉河里了</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos161235"/>
+    </navPoint>
+    <navPoint id="np_14" playOrder="14">
+      <navLabel>
+        <text>十一　大白马不见了</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos175125"/>
+    </navPoint>
+    <navPoint id="np_15" playOrder="15">
+      <navLabel>
+        <text>十二　我不能丢下你</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos188997"/>
+    </navPoint>
+    <navPoint id="np_16" playOrder="16">
+      <navLabel>
+        <text>十三　寒夜里的篝火</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos199248"/>
+    </navPoint>
+    <navPoint id="np_17" playOrder="17">
+      <navLabel>
+        <text>十四　一碗鱼汤</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos209700"/>
+    </navPoint>
+    <navPoint id="np_18" playOrder="18">
+      <navLabel>
+        <text>十五　走出草地后的第一仗</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos221499"/>
+    </navPoint>
+    <navPoint id="np_19" playOrder="19">
+      <navLabel>
+        <text>十六　敌军师长跳河喽</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos233279"/>
+    </navPoint>
+    <navPoint id="np_20" playOrder="20">
+      <navLabel>
+        <text>十七　大雁替我捎封信</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos243160"/>
+    </navPoint>
+    <navPoint id="np_21" playOrder="21">
+      <navLabel>
+        <text>后记</text>
+      </navLabel>
+      <content src="gszelgcd.html#filepos249896"/>
+    </navPoint>
+  </navMap>
+</ncx>

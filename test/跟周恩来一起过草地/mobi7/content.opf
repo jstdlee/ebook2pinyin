@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="uid">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title>鲁滨逊漂流记</dc:title>
+<dc:language>zh</dc:language>
+<dc:identifier id="uid">3108859528</dc:identifier>
+<dc:creator>Unknown</dc:creator>
+<dc:contributor>calibre (3.44.0) [https://calibre-ebook.com]</dc:contributor>
+<dc:source>calibre:c0fe1e58-7901-4ede-8bb6-3420f2daffe2</dc:source>
+<dc:date opf:event="publication">0101-01-01T00:00:00+00:00</dc:date>
+<meta name="output encoding" content="utf-8" />
+<!-- BEGIN INFORMATION ONLY 
+<meta name="ASIN" content="c0fe1e58-7901-4ede-8bb6-3420f2daffe2" />
+<meta name="Creator-Software" content="201" />
+<meta name="Metadata-Record-Offset" content="0" />
+<meta name="Content-Language-Tag" content="zh" />
+<meta name="Creator-Minor-Version" content="2" />
+<meta name="Creator-Major-Version" content="1" />
+<meta name="cdeType" content="EBOK" />
+<meta name="StartOffset" content="25" />
+<meta name="Creator-Build-Number" content="33307" />
+<meta name="Updated_Title" content="鲁滨逊漂流记" />
+END INFORMATION ONLY -->
+</metadata>
+<manifest>
+<item id="item0" media-type="text/html" href="book.html" />
+<item id="ncx" media-type="application/x-dtbncx+xml" href="toc.ncx" />
+</manifest>
+<spine toc="ncx">
+<itemref idref="item0"/>
+</spine>
+<tours>
+</tours>
+<guide>
+<reference type="text" href="book.html#filepos25" />
+</guide>
+</package>
