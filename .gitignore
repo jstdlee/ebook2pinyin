@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Runtime/generated outputs
+*.pinyin.*
+*_pinyin.*
+.run/
+.verify/
+.pytest-tmp/
+
+# Local book corpus and conversion scratch files
+books/*
+!books/.gitkeep
+
+# Local third-party binaries. See bin/README.md.
+bin/*.exe
+bin/manual.html
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Secrets / credentials
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+token.json
+secrets.*

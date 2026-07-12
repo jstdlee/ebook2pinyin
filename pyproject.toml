@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mobi-pinyin"
+version = "0.1.0"
+description = "Add pinyin ruby annotations to Chinese ebooks and documents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["chinese", "pinyin", "epub", "mobi", "azw3", "pdf", "ebook"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "beautifulsoup4>=4.12",
+    "pymupdf>=1.24",
+    "pypinyin>=0.51",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+web = ["gradio>=4.0"]
+dev = ["pytest>=8.0"]
+all = [
+    "gradio>=4.0",
+    "pytest>=8.0",
+]
+
+[project.scripts]
+mobi-pinyin = "mobi_pinyin.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mobi_pinyin*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
