@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
+import importlib.util
+import shutil
 from typing import Optional
 
 import typer
@@ -51,6 +53,82 @@ def web(
     from .web import build_app
 
     build_app().launch(server_name=host, server_port=port, share=share)
+
+
+@app.command()
+def doctor() -> None:
+    """Check Python packages and external ebook conversion tools."""
+    checks = [
+        (
+            "pypinyin",
+            _has_module("pypinyin"),
+            True,
+            "Chinese -> pinyin annotation",
+            'python -m pip install "ebook2pinyin"',
+        ),
+        (
+            "beautifulsoup4",
+            _has_module("bs4"),
+            True,
+            "EPUB/HTML rewriting",
+            'python -m pip install "ebook2pinyin"',
+        ),
+        (
+            "pymupdf",
+            _has_module("fitz"),
+            True,
+            "PDF input/output",
+            'python -m pip install "ebook2pinyin"',
+        ),
+        (
+            "gradio",
+            _has_module("gradio"),
+            False,
+            "web UI",
+            'python -m pip install "ebook2pinyin[web]"',
+        ),
+        (
+            "ebook-convert",
+            shutil.which("ebook-convert") is not None,
+            True,
+            "MOBI/AZW3 conversion",
+            "Install Calibre and add its install directory to PATH.",
+        ),
+        (
+            "ebook-meta",
+            shutil.which("ebook-meta") is not None,
+            False,
+            "MOBI/AZW3 title detection",
+            "Install Calibre and add its install directory to PATH.",
+        ),
+    ]
+
+    failed_required = False
+    missing: list[tuple[str, bool, str]] = []
+    for name, ok, required, note, fix in checks:
+        marker = "OK" if ok else "MISSING"
+        scope = "required" if required else "optional"
+        typer.echo(f"{marker:7} {name:16} {scope:8} {note}")
+        if not ok:
+            missing.append((name, required, fix))
+        if not ok and required:
+            failed_required = True
+
+    if missing:
+        typer.echo()
+        typer.echo("Setup suggestions:")
+        for name, required, fix in missing:
+            prefix = "required" if required else "optional"
+            typer.echo(f"- {name} ({prefix}): {fix}")
+        typer.echo()
+        typer.echo("After installing external tools, open a new terminal so PATH changes are visible.")
+
+    if failed_required:
+        raise typer.Exit(1)
+
+
+def _has_module(name: str) -> bool:
+    return importlib.util.find_spec(name) is not None
 
 
 if __name__ == "__main__":

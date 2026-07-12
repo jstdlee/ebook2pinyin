@@ -33,7 +33,38 @@ book.mobi with title "鲁滨逊漂流记" -> 鲁滨逊漂流记_pinyin.mobi
 python -m pip install -e ".[all]"
 ```
 
-For MOBI/AZW3 conversion, install Calibre and make sure `ebook-convert` and `ebook-meta` are on `PATH`.
+## Dependencies
+
+This is not a pure-Python converter for every ebook format.
+
+Python package dependencies:
+
+- `pypinyin`: Chinese character to pinyin conversion.
+- `beautifulsoup4`: HTML/XHTML parsing and rewriting for EPUB.
+- `pymupdf`: PDF text extraction and optional fixed-layout PDF output.
+- `typer`: CLI.
+- `gradio`: optional web UI, installed by `.[web]` or `.[all]`.
+
+External binary dependencies:
+
+- Calibre `ebook-convert`: required for MOBI and AZW3 conversion.
+- Calibre `ebook-meta`: optional, used to read MOBI/AZW3 titles for better output names.
+
+EPUB and PDF paths are implemented with Python libraries. MOBI/AZW3 are not; they convert through Calibre:
+
+```text
+MOBI/AZW3 -> ebook-convert -> EPUB -> add pinyin ruby -> ebook-convert -> MOBI/AZW3
+```
+
+Install Calibre separately from <https://calibre-ebook.com/> and make sure `ebook-convert` and `ebook-meta` are on `PATH`.
+
+Check the current machine:
+
+```powershell
+ebook2pinyin doctor
+```
+
+If a required item is missing, `doctor` prints the install/configuration step to fix it.
 
 ## CLI
 
@@ -57,7 +88,7 @@ The web UI accepts one book at a time and streams conversion stages/progress.
 
 ## Binary Dependencies
 
-The current code path does not require bundled executables. Calibre is the main external binary dependency for MOBI/AZW3.
+The repository does not bundle required executables. Calibre is the external binary dependency for MOBI/AZW3.
 
 See [bin/README.md](bin/README.md) for notes about local helper binaries and redistribution/licensing cautions.
 
@@ -68,6 +99,10 @@ python -m pytest
 ```
 
 The repository `.gitignore` excludes local book corpora, generated pinyin outputs, Python caches, local environments, credentials, and local `.exe` helper binaries.
+
+## Release
+
+See [docs/RELEASE.md](docs/RELEASE.md) for the full release checklist, including dependency verification, build artifacts, GitHub release notes, and optional PyPI publishing.
 
 ## License
 
