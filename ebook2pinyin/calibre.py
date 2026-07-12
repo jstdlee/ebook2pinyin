@@ -27,7 +27,7 @@ def annotate_via_calibre(
             "MOBI/AZW3 conversion requires Calibre's ebook-convert on PATH."
         )
 
-    with tempfile.TemporaryDirectory(prefix="mobi-pinyin-") as temp_dir:
+    with tempfile.TemporaryDirectory(prefix="ebook2pinyin-") as temp_dir:
         temp = Path(temp_dir)
         intermediate_epub = temp / "input.epub"
         annotated_epub = temp / "annotated.epub"

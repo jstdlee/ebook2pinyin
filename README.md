@@ -1,6 +1,6 @@
-# mobi-pinyin
+# ebook2pinyin
 
-`mobi-pinyin` turns Chinese ebooks and documents into pinyin-annotated reader files.
+`ebook2pinyin` turns Chinese ebooks and documents into pinyin-annotated reader files.
 It is designed for single-book CLI conversion and a lightweight Gradio web UI.
 
 ## Supported Inputs
@@ -38,11 +38,11 @@ For MOBI/AZW3 conversion, install Calibre and make sure `ebook-convert` and `ebo
 ## CLI
 
 ```powershell
-mobi-pinyin convert input.epub
-mobi-pinyin convert input.pdf
-mobi-pinyin convert input.pdf --output input_pinyin.pdf --rt-size 0.35
-mobi-pinyin convert input.mobi
-mobi-pinyin convert input.azw3
+ebook2pinyin convert input.epub
+ebook2pinyin convert input.pdf
+ebook2pinyin convert input.pdf --output input_pinyin.pdf --rt-size 0.35
+ebook2pinyin convert input.mobi
+ebook2pinyin convert input.azw3
 ```
 
 Use `--output` to force a specific output path. For PDF inputs, `.epub` and `.pdf` outputs are both allowed; `.epub` is the recommended default.
@@ -50,7 +50,7 @@ Use `--output` to force a specific output path. For PDF inputs, `.epub` and `.pd
 ## Gradio
 
 ```powershell
-mobi-pinyin web --host 127.0.0.1 --port 7860
+ebook2pinyin web --host 127.0.0.1 --port 7860
 ```
 
 The web UI accepts one book at a time and streams conversion stages/progress.

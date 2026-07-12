@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mobi-pinyin"
+name = "ebook2pinyin"
 version = "0.1.0"
 description = "Add pinyin ruby annotations to Chinese ebooks and documents."
 readme = "README.md"
@@ -36,11 +36,11 @@ all = [
 ]
 
 [project.scripts]
-mobi-pinyin = "mobi_pinyin.cli:app"
+ebook2pinyin = "ebook2pinyin.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["mobi_pinyin*"]
+include = ["ebook2pinyin*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

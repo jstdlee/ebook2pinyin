@@ -163,10 +163,10 @@ def _inject_inline_css(soup: BeautifulSoup, css: str) -> None:
         else:
             soup.insert(0, head)
 
-    existing = head.find("style", attrs={"data-mobi-pinyin": "true"})
+    existing = head.find("style", attrs={"data-ebook2pinyin": "true"})
     if existing is None:
         style = soup.new_tag("style")
-        style["data-mobi-pinyin"] = "true"
+        style["data-ebook2pinyin"] = "true"
         style.string = css
         head.append(style)
     else:

@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from mobi_pinyin.annotator import AnnotationOptions
-import mobi_pinyin.calibre as calibre
+from ebook2pinyin.annotator import AnnotationOptions
+import ebook2pinyin.calibre as calibre
 
 
 class FakeBackend:

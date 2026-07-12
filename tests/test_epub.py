@@ -1,8 +1,8 @@
 from pathlib import Path
 from zipfile import ZipFile
 
-from mobi_pinyin.annotator import AnnotationOptions
-from mobi_pinyin.epub import annotate_epub
+from ebook2pinyin.annotator import AnnotationOptions
+from ebook2pinyin.epub import annotate_epub
 
 
 class FakeBackend:
@@ -39,9 +39,9 @@ def test_annotate_epub_rewrites_html_and_adds_css(tmp_path: Path):
     with ZipFile(output) as epub:
         chapter = epub.read("OEBPS/Text/chapter.xhtml").decode("utf-8")
         opf = epub.read("OEBPS/content.opf").decode("utf-8")
-        css = epub.read("OEBPS/mobi-pinyin.css").decode("utf-8")
+        css = epub.read("OEBPS/ebook2pinyin.css").decode("utf-8")
 
     assert '<ruby class="pinyin-ruby">中<rt>zhong</rt></ruby>' in chapter
-    assert 'href="../mobi-pinyin.css"' in chapter
-    assert 'href="mobi-pinyin.css"' in opf
+    assert 'href="../ebook2pinyin.css"' in chapter
+    assert 'href="ebook2pinyin.css"' in opf
     assert "ruby.pinyin-ruby" in css

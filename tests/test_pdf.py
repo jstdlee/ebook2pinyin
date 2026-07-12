@@ -3,8 +3,8 @@ from zipfile import ZipFile
 
 import pytest
 
-from mobi_pinyin.annotator import AnnotationOptions
-from mobi_pinyin.pdf import pdf_to_epub
+from ebook2pinyin.annotator import AnnotationOptions
+from ebook2pinyin.pdf import pdf_to_epub
 
 
 class FakeBackend:

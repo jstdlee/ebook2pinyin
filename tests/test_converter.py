@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-import mobi_pinyin.converter as converter
-from mobi_pinyin.converter import convert_book, default_output_path
+import ebook2pinyin.converter as converter
+from ebook2pinyin.converter import convert_book, default_output_path
 
 
 def test_default_output_path_keeps_reader_format_except_pdf():

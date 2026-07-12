@@ -1,4 +1,4 @@
-from mobi_pinyin.annotator import AnnotationOptions, annotate_html, annotate_text
+from ebook2pinyin.annotator import AnnotationOptions, annotate_html, annotate_text
 
 
 class FakeBackend:

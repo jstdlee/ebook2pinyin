@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from mobi_pinyin.progress import Stage
-import mobi_pinyin.web as web
+from ebook2pinyin.progress import Stage
+import ebook2pinyin.web as web
 
 
 class UploadedFile:

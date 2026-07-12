@@ -110,7 +110,7 @@ def _page_to_xhtml(title: str, page_number: int, paragraphs: list[str]) -> str:
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>{escape(title)} - {page_number}</title>
-  <link rel="stylesheet" type="text/css" href="../mobi-pinyin.css" />
+  <link rel="stylesheet" type="text/css" href="../ebook2pinyin.css" />
 </head>
 <body>
   <section class="pdf-page" id="page-{page_number}">
@@ -145,7 +145,7 @@ def _write_epub_from_pages(
         for filename, data in pages:
             epub.writestr(f"OEBPS/{filename}", data, compress_type=ZIP_DEFLATED)
         epub.writestr(
-            "OEBPS/mobi-pinyin.css",
+            "OEBPS/ebook2pinyin.css",
             _epub_css(options).encode("utf-8"),
             compress_type=ZIP_DEFLATED,
         )
@@ -221,13 +221,13 @@ def _opf(title: str, pages: list[tuple[str, bytes]]) -> str:
     return f"""<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:identifier id="bookid">mobi-pinyin-{escape(title)}</dc:identifier>
+    <dc:identifier id="bookid">ebook2pinyin-{escape(title)}</dc:identifier>
     <dc:title>{escape(title)}</dc:title>
     <dc:language>zh</dc:language>
   </metadata>
   <manifest>
     <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav" />
-    <item id="css" href="mobi-pinyin.css" media-type="text/css" />
+    <item id="css" href="ebook2pinyin.css" media-type="text/css" />
 {manifest_items}
   </manifest>
   <spine>

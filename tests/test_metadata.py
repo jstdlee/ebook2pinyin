@@ -1,7 +1,7 @@
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 
-from mobi_pinyin.metadata import default_output_path_for_book, epub_title, safe_filename
+from ebook2pinyin.metadata import default_output_path_for_book, epub_title, safe_filename
 
 
 def test_safe_filename_removes_windows_reserved_characters():

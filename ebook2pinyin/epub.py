@@ -88,7 +88,7 @@ def _html_manifest_items(opf_root: ET.Element, opf_path: str) -> list[str]:
 
 def _css_path_for_opf(opf_path: str) -> str:
     opf_dir = posixpath.dirname(opf_path)
-    return posixpath.normpath(posixpath.join(opf_dir, "mobi-pinyin.css"))
+    return posixpath.normpath(posixpath.join(opf_dir, "ebook2pinyin.css"))
 
 
 def _relative_href(from_item: str, to_item: str) -> str:
@@ -105,10 +105,10 @@ def _link_stylesheet(html_bytes: bytes, href: str) -> bytes:
             soup.html.insert(0, head)
         else:
             soup.insert(0, head)
-    existing = head.find("link", attrs={"data-mobi-pinyin": "true"})
+    existing = head.find("link", attrs={"data-ebook2pinyin": "true"})
     if existing is None:
         link = soup.new_tag("link", rel="stylesheet", href=href)
-        link["data-mobi-pinyin"] = "true"
+        link["data-ebook2pinyin"] = "true"
         head.append(link)
     else:
         existing["href"] = href
@@ -125,15 +125,15 @@ def _ensure_css_manifest(opf_root: ET.Element, opf_path: str, css_path: str) -> 
 
     href = _relative_href(opf_path, css_path)
     for item in list(manifest):
-        if item.attrib.get("href") == href or item.attrib.get("id") == "mobi-pinyin-css":
-            item.attrib.update({"href": href, "media-type": "text/css", "id": "mobi-pinyin-css"})
+        if item.attrib.get("href") == href or item.attrib.get("id") == "ebook2pinyin-css":
+            item.attrib.update({"href": href, "media-type": "text/css", "id": "ebook2pinyin-css"})
             break
     else:
         namespace = _namespace(manifest.tag)
         item_tag = f"{{{namespace}}}item" if namespace else "item"
         item = ET.Element(
             item_tag,
-            {"id": "mobi-pinyin-css", "href": href, "media-type": "text/css"},
+            {"id": "ebook2pinyin-css", "href": href, "media-type": "text/css"},
         )
         manifest.append(item)
 

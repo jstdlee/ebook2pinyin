@@ -13,8 +13,8 @@ from .progress import Stage
 
 
 def build_app() -> gr.Blocks:
-    with gr.Blocks(title="mobi-pinyin") as demo:
-        gr.Markdown("# mobi-pinyin")
+    with gr.Blocks(title="ebook2pinyin") as demo:
+        gr.Markdown("# ebook2pinyin")
         with gr.Row():
             input_file = gr.File(label="Chinese book/document", file_types=[".epub", ".pdf", ".azw3", ".mobi"])
             output_file = gr.File(label="Annotated output")
@@ -47,7 +47,7 @@ def _convert_upload(file_obj, ruby_size: float, rt_size: float, line_height: flo
     def report(stage: Stage) -> None:
         events.put(("stage", stage))
 
-    output_dir = Path(tempfile.mkdtemp(prefix="mobi-pinyin-web-"))
+    output_dir = Path(tempfile.mkdtemp(prefix="ebook2pinyin-web-"))
     output_path = output_dir / default_output_path(source).name
 
     def worker() -> None:
